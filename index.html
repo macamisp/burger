@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Shop</title>
+    <link rel="stylesheet" href="THEBURGER.css">
+</head>
+<body>
+    <div id="login-page" class="page">
+        <div class="container">
+            <h1>මහසො නගේ බර්ගර් කඩේට පිවිසෙමු</h1>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login-button">Login</button>
+        </div>
+    </div>
+    <div id="dashboard" class="page">
+        <div class="sidebar">
+            <button data-target="login-history">Login History</button>
+            <button data-target="add-customer">Add Customer</button>
+            <button data-target="show-customer">Show Customer</button>
+            <button data-target="place-order">Place Order</button>
+            <button data-target="transaction-history">Transaction History</button>
+        </div>
+        <div class="content">
+            <div id="login-history" class="form">
+                <h2>LOGIN HISTORY</h2>
+                <!-- Add content here -->
+            </div>
+            <div id="add-customer" class="form">
+                <h2>ADD CUSTOMER</h2>
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Phone">
+                <input type="email" placeholder="Email">
+                <button>Submit</button>
+            </div>
+            <div id="show-customer" class="form">
+                <h2>SHOW CUSTOMER</h2>
+                <!-- Add content here -->
+            </div>
+            <div id="place-order" class="form">
+                <h2>PLACE ORDER</h2>
+                <div>
+                    <label for="item">Item:</label>
+                    <input type="text" id="item" placeholder="Item Name">
+                </div>
+                <div>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" placeholder="Quantity">
+                </div>
+                <div>
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" placeholder="Price">
+                </div>
+                <button id="add-to-cart">Add to Cart</button>
+                <div id="cart">
+                    <h3>Cart</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Cart items will be added here dynamically -->
+                        </tbody>
+                    </table>
+                    <div id="cart-total">
+                        <strong>Total: $<span>0.00</span></strong>
+                    </div>
+                    <button id="checkout">Checkout</button>
+                </div>
+            </div>
+            <div id="transaction-history" class="form">
+                <h2>TRANSACTION HISTORY</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Date</th>
+                            <th>Total Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Transaction history will be added here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="THEBURGER.js"></script>
+</body>
+</html>
